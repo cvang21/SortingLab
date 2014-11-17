@@ -7,8 +7,15 @@ public class Song {
     private String songTitle;
     private String artist;
     private String album;
-    private int trackNumber;
+    private String trackNumber;
 
+    public Song(String songTitle, String artist, String album, String trackNumber) {
+        this.songTitle = songTitle;
+        this.artist = artist;
+        this.album = album;
+        this.trackNumber = trackNumber;
+    }
+    
     public String getSongTitle() {
         return songTitle;
     }
@@ -33,18 +40,18 @@ public class Song {
         this.album = album;
     }
 
-    public int getTrackNumber() {
+    public String getTrackNumber() {
         return trackNumber;
     }
 
-    public void setTrackNumber(int trackNumber) {
+    public void setTrackNumber(String trackNumber) {
         this.trackNumber = trackNumber;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 97 * hash + this.trackNumber;
+        int hash = 7;
+        hash = 11 * hash + Objects.hashCode(this.trackNumber);
         return hash;
     }
 
@@ -57,12 +64,13 @@ public class Song {
             return false;
         }
         final Song other = (Song) obj;
-        if (this.trackNumber != other.trackNumber) {
+        if (!Objects.equals(this.trackNumber, other.trackNumber)) {
             return false;
         }
         return true;
     }
-  
+
+     
     @Override
     public String toString() {
         return "Song{" + "songTitle=" + songTitle + ", artist=" + artist + ",  album=" + album + ", trackNumber=" + trackNumber + "'}'";
