@@ -42,9 +42,8 @@ public class Exercise3 {
         Collection songMapValues = songMap.values();
         List<Song> sortedList = new ArrayList<>(songMapValues);
         
-        sortedList.sort(songMap);
-        System.out.println("");
-        System.out.println("Songs from the sorted list created from the collection of the map values, sorted by Artist: ");
+        Collections.sort(sortedList);
+        System.out.println("Sorted Songs ");
         for (Song song : sortedList){
             System.out.println("Song" + song);
         }

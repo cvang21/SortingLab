@@ -15,7 +15,7 @@ import java.util.Set;
  *
  * @author cvadmin
  */
-public class Excercise5 {
+public class Exercise5 {
     public static void main(String[] args) {
         
         Song s1 = new Song("Here's to the Night", "Eve 6", "Horrorscope", "06");
